@@ -9,9 +9,9 @@
         <WQ jid="wq.127.0.0.1" name="SPADE Workgroup Queues"/>
     </plugins>
     <components>
-        <AMS jid="ams.127.0.0.1" name="AMS" username="ams" password="BsOOHFIi"/>
-        <DF jid="df.127.0.0.1" name="DF" username="df" password="zmGvDanm"/>
-        <ACC jid="acc.127.0.0.1" name="ACC" username="acc" password="IAdEBAnv"/>
+        <AMS jid="ams.127.0.0.1" name="AMS" username="ams" password="mkaQGkTK"/>
+        <DF jid="df.127.0.0.1" name="DF" username="df" password="iJZeTqNi"/>
+        <ACC jid="acc.127.0.0.1" name="ACC" username="acc" password="ggIkcaXM"/>
     </components>
 </server>
         

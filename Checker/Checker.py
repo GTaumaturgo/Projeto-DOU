@@ -2,21 +2,16 @@ import spade
 import cv2 as cv
 import keyboard
 
-def show(img):
-    cv.namedWindow('image', cv.WINDOW_NORMAL)
-    cv.imshow('image', img)
-    cv.waitKey(0)
-    cv.destroyAllWindows()
-
-
 
 class Checker(spade.Agent.Agent):
-    class CheckBehav(spade.Behaviour.Behaviour):
-        def _process(self):
+	class CheckBehav(spade.Behaviour.Behaviour):
+		def _process(self):
 			print("voce quer abrir a imagem?")
 			try:
-				s = input("")
+				s = raw_input("")
+				print(s)
 				if s == "sim":
+					print("mandei")
 					# First, form the receiver AID
 					receiver = spade.AID.aid(name="agent2@127.0.0.1", 
 						addresses=["xmpp://agent2@127.0.0.1"])
@@ -36,10 +31,9 @@ class Checker(spade.Agent.Agent):
 				
 			except Exception as E:
 				print(E.message)
-
-    def _setup(self):
-        b = self.CheckBehav()
-        self.addBehaviour(b, None)
+	def _setup(self):
+		b = self.CheckBehav()
+		self.addBehaviour(b, None)
 
 
 if __name__ == "__main__":

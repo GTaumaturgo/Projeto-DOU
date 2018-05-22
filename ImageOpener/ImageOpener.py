@@ -8,7 +8,6 @@ def show(img):
     cv.waitKey(0)
     cv.destroyAllWindows()
 
-
 class Opener(spade.Agent.Agent):
 	class ReceiveBehav(spade.Behaviour.Behaviour):
 		"""This behaviour will receive all kind of messages"""
@@ -20,27 +19,11 @@ class Opener(spade.Agent.Agent):
 			self.msg = self._receive(True)
 
 
-			# Check wether the message arrived
+			# Check wether the message arrived/
 			if self.msg:
 				print "I got a message!"
-                im = cv.imread('peppers_color.tif')
-                show(im)
-
-	# class AnotherBehav(spade.Behaviour.Behaviour):
-	# 	"""This behaviour will receive only messages of the 'cooking' ontology"""
-
-	# 	def _process(self):
-	# 		self.msg = None
-
-	# 		# Blocking receive indefinitely
-	# 		self.msg = self._receive(True)
-
-	# 		# Check wether the message arrived
-	# 		if self.msg:
-	# 			print "I got a cooking message!"
-	# 		else:
-	# 			print "I waited but got no cooking message"
-
+                # im = cv.imread('peppers_color.tif')
+                # show(im)
 	def _setup(self):
 		# Add the "ReceiveBehav" as the default behaviour
 		rb = self.ReceiveBehav()
