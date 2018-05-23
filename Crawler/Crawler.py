@@ -8,9 +8,11 @@ class Crawler(spade.Agent.Agent):
 		def onStart(self):
 			pass
 		def _process(self):
-			for i in range(1,75):
+			for i in range(1,10000):
 				url = url_prefix + str(i) + url_suffix
 				response = urllib2.urlopen(url)
+				if 'DOCTYPE HTML' in response.read():
+					break
 				file = open("documents/document" + str(i) + ".pdf",'wb')
 				file.write(response.read())
 				file.close()
